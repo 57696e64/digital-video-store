@@ -1,22 +1,25 @@
+# Use an official JDK image as the base
+FROM eclipse-temurin:17-jdk
+
 # Set working directory
 WORKDIR /app
 
-# Copy wrapper and grant permission
+# Copy Maven wrapper and grant permission
 COPY mvnw .
 RUN chmod +x mvnw
 
-# Copy the wrapper support folder and pom.xml
+# Copy Maven wrapper folder and pom.xml
 COPY .mvn .mvn
 COPY pom.xml .
 
-# Pre-download dependencies (optional but useful)
+# Pre-download dependencies
 RUN ./mvnw dependency:go-offline
 
-# Copy the full project
+# Copy full source code
 COPY src src
 
-# Build and package
+# Build the application
 RUN ./mvnw package
 
-# Run the app
+# Run the built jar file
 CMD ["java", "-jar", "target/*.jar"]

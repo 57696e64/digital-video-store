@@ -1,22 +1,22 @@
-# Use official OpenJDK image
-FROM openjdk:17-jdk-slim
-
-# Set working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy Maven wrapper and pom.xml first to take advantage of Docker caching
+# Copy wrapper and grant permission
 COPY mvnw .
+RUN chmod +x mvnw
+
+# Copy the wrapper support folder and pom.xml
 COPY .mvn .mvn
 COPY pom.xml .
 
-# Pre-download dependencies (optional but faster rebuilds)
+# Pre-download dependencies (optional but useful)
 RUN ./mvnw dependency:go-offline
 
-# Copy full project
-COPY . .
+# Copy the full project
+COPY src src
 
-# Build the application
-RUN ./mvnw clean install
+# Build and package
+RUN ./mvnw package
 
-# Run the generated jar file (assumes 1 jar inside target/)
-CMD ["sh", "-c", "java -jar target/*.jar"]
+# Run the app
+CMD ["java", "-jar", "target/*.jar"]

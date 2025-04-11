@@ -1,0 +1,28 @@
+/* Featured Section Styles */
+.featured {
+  margin: 40px 0; /* Adds vertical spacing around the section */
+  text-align: center; /* Centers all text inside */
+  color: white; /* Ensures text is visible on a dark background */
+}
+
+/* Section Title */
+.featured h3 {
+  font-size: 1.8rem; /* Sets font size */
+  margin-bottom: 20px; /* Adds spacing below the title */
+}
+
+/* Grid Layout for Featured Items */
+.featured-grid {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers items in the grid */
+  gap: 15px; /* Adds spacing between items */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  padding: 0 20px; /* Adds horizontal padding for spacing */
+}
+
+/* Loading Text */
+.featured-loading {
+  text-align: center; /* Centers loading message */
+  font-size: 1.5rem; /* Increases font size */
+  padding: 20px; /* Adds spacing around text */
+}

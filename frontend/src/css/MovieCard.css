@@ -1,0 +1,43 @@
+/* Movie Card Styles - Applied to both Home and Listing Pages */
+.movie-card {
+  position: relative; /* Allows positioning of overlay */
+  width: 240px; /* Maintains consistent card width */
+  aspect-ratio: 2 / 3; /* Ensures all images maintain a 480x720 ratio */
+  overflow: hidden; /* Prevents content from spilling outside */
+  border-radius: 10px; /* Rounds corners for a modern look */
+  transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+}
+
+/* Hover Effect: Enlarges the card slightly */
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Poster Image */
+.movie-poster {
+  width: 100%; /* Ensures the poster fills the container */
+  height: 100%; /* Ensures full coverage */
+  object-fit: cover; /* Prevents distortion, cropping to fit */
+  border-radius: 10px; /* Keeps rounded corners */
+}
+
+/* Gradient Overlay - Fades into the poster from bottom */
+.overlay {
+  position: absolute; /* Ensures overlay stays on top of the poster */
+  bottom: 0; /* Positions it at the bottom */
+  left: 0;
+  width: 100%; /* Full width */
+  height: 25%; /* Covers lower portion of the image */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); /* Dark-to-transparent fade */
+  display: flex; /* Enables flexible positioning of text */
+  align-items: flex-end; /* Aligns title text to the bottom */
+  padding: 10px; /* Adds spacing inside overlay */
+}
+
+/* Movie Title - Displayed inside the overlay */
+.movie-title {
+  font-size: 16px; /* Sets font size for readability */
+  color: white; /* Ensures visibility against dark overlay */
+  font-weight: bold; /* Emphasizes the movie title */
+  text-align: left; /* Aligns title to the left */
+}

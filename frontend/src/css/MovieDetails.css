@@ -1,0 +1,149 @@
+/* Movie Details Page Styles */
+.movie-details {
+  display: flex; /* Uses flexbox to align elements in a row */
+  flex-direction: row; /* Ensures horizontal layout */
+  align-items: flex-start; /* Aligns content to the top */
+  justify-content: center; /* Centers content horizontally */
+  padding: 40px; /* Adds spacing around the content */
+  background-color: black; /* Sets background to black for a dark theme */
+  color: white; /* Ensures text is readable */
+  gap: 40px; /* Creates spacing between sections */
+  max-width: 1800px; /* Restricts maximum width for better layout */
+  margin: auto; /* Centers the component horizontally */
+}
+
+/* Loading Screen - Shown when data is being fetched */
+.loading {
+  text-align: center; /* Centers the loading text */
+}
+
+/* Left Section: Small Poster and Buttons */
+.left-section {
+  display: flex; /* Enables flexbox for vertical alignment */
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center; /* Centers elements */
+  gap: 20px; /* Adds spacing between poster and buttons */
+}
+
+/* Small Poster - Displays movie/show thumbnail */
+.small-poster {
+  width: 200px; /* Fixed width for consistent scaling */
+  height: 300px; /* Fixed height */
+  background-color: #333; /* Fallback color */
+  display: flex; /* Enables flexbox for centering */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  color: white; /* Text color */
+  border-radius: 8px; /* Rounds the corners */
+  background-image: url('https://dummyimage.com/480x720/333/ffffff&text=Poster'); /* Placeholder */
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex; /* Uses flexbox to align buttons */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  flex-direction: column; /* Stacks buttons vertically */
+  gap: 15px; /* Adds spacing between buttons */
+}
+
+/* Middle Section: Movie/TV Show Information */
+.details-content {
+  width: 42%; /* Defines width relative to the parent container */
+  min-width: 200px; /* Ensures a minimum width */
+  max-width: 950px; /* Restricts max width for better readability */
+  display: flex; /* Uses flexbox */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: flex-start; /* Aligns text to the left */
+}
+
+/* Movie Title */
+.movie-title {
+  font-size: 26px; /* Large font for emphasis */
+  font-weight: bold; /* Makes the title bold */
+  margin-bottom: 10px; /* Adds spacing below the title */
+}
+
+/* Meta Information (Genre, Year, Category) */
+.meta-info {
+  font-size: 18px; /* Slightly smaller text */
+  color: #aaa; /* Lighter color for subtlety */
+  margin-bottom: 10px; /* Adds spacing */
+}
+
+/* Movie/TV Show Synopsis */
+.synopsis {
+  display: flex; /* Uses flexbox */
+  font-size: clamp(14px, 1.5vw, 18px); /* Responsive font size based on viewport */
+  line-height: 1.8; /* Improves readability */
+  margin-bottom: 20px; /* Adds spacing */
+  width: 100%; /* Ensures it stretches within its container */
+}
+
+/* Large Poster Container */
+.large-poster {
+  width: 100%; /* Makes the container stretch */
+  max-width: 1400px; /* Restricts max width for better scaling */
+  aspect-ratio: 16 / 9; /* Ensures a widescreen aspect ratio */
+  position: relative; /* Needed for overlay effects */
+  overflow: hidden; /* Prevents content overflow */
+  border-radius: 8px; /* Rounds the corners */
+  background-color: black; /* Ensures a consistent background */
+}
+
+/* Movie Poster Image */
+.large-poster img {
+  width: 100%; /* Ensures full width */
+  height: 100%; /* Ensures full height */
+  object-fit: cover; /* Prevents image distortion */
+  border-radius: 8px; /* Keeps rounded corners */
+  display: block; /* Removes extra spacing below images */
+}
+
+/* Gradient Overlay Effect */
+.large-poster::before {
+  content: ""; /* Creates an empty element for the overlay */
+  position: absolute; /* Positions it on top of the poster */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, black, transparent 50%); /* Creates a smooth black fade effect */
+  z-index: 1; /* Ensures it's above the image */
+}
+
+/* Pricing & Action Buttons */
+.rent-btn, .buy-btn, .play-btn {
+  background-color: transparent; /* Keeps background clear */
+  color: #007bff; /* Sets text color to blue */
+  border: 2px solid #007bff; /* Adds a blue outline */
+  padding: 12px 22px; /* Adjusts button size */
+  font-size: 18px; /* Sets readable font size */
+  cursor: pointer; /* Changes cursor to pointer */
+  border-radius: 25px; /* Makes button rounded */
+  width: 100%; /* Ensures full width */
+  text-align: center; /* Centers text inside the button */
+}
+
+/* Hover Effect for Buttons */
+.rent-btn:hover, .buy-btn:hover, .play-btn:hover {
+  background-color: #007bff; /* Changes background to blue on hover */
+  color: white; /* Changes text color to white on hover */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .movie-details {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+    text-align: center; /* Center text */
+  }
+  .left-section, .details-content {
+    width: 100%; /* Make sections full width */
+  }
+  .small-poster {
+    width: 80%; /* Adjust poster size for mobile */
+    max-width: 300px;
+  }
+}

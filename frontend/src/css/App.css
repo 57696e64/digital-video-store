@@ -1,0 +1,30 @@
+/* Global Styles for the App */
+.app-container {
+  display: flex; /* Enables flexbox for layout structure */
+  flex-direction: column; /* Ensures content is stacked vertically */
+  min-height: 100vh; /* Ensures the app stretches at least the full viewport height */
+  background-color: black; /* Sets the background to black for a dark theme */
+  color: white; /* Default text color */
+}
+
+/* Ensures that content (except the header) takes up available space */
+.app-container > *:not(.header) {
+  flex-grow: 1; /* Allows main content to expand and push the footer down */
+}
+
+/* General styling for links */
+a {
+  text-decoration: none; /* Removes underline from links */
+  color: white; /* Default link color */
+}
+
+/* Hover effect for links */
+a:hover {
+  color: #007bff; /* Changes link color to blue on hover */
+}
+
+/* Prevent horizontal scrolling */
+body, html {
+  overflow-x: hidden; /* Hides horizontal overflow */
+  width: 100%; /* Ensures it doesn’t stretch beyond screen width */
+}

@@ -1,0 +1,178 @@
+/* Header Container */
+.header {
+  width: 100%;
+  background-color: black;
+}
+
+/* Flex layout within header */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 15px 0;
+  position: relative;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff;
+  white-space: nowrap;
+}
+
+/* Navigation Bar Styling */
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Combined container for search + auth */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 300px;
+  justify-content: flex-end;
+}
+
+/* Search Container */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-field {
+  position: relative;
+}
+
+.search-field input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  padding: 5px 0;
+  outline: none;
+  width: 150px;
+  font-size: 14px;
+}
+
+.search-field input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+.search-button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+  min-width: 120px;
+}
+
+.auth-buttons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  color: #007bff;
+}
+
+/* Welcome Text */
+.welcome-text {
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .search-field input {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}

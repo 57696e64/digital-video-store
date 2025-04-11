@@ -1,0 +1,33 @@
+/* Item List Page - Main Container */
+.item-list {
+  padding: 20px; /* Adds spacing around the list */
+  background-color: black; /* Maintains dark theme */
+  color: white; /* Ensures text is visible */
+  text-align: center; /* Centers text elements */
+}
+
+/* Grid Container - Ensures content is centered and responsive */
+.grid-container {
+  width: 100%; /* Full width for responsiveness */
+  max-width: 1700px; /* Prevents layout from becoming too wide */
+  margin: 0 auto; /* Centers the grid on the page */
+}
+
+/* Grid Layout - Used for displaying Movies & TV Shows */
+.grid {
+  /* display: grid; /* Enables grid-based layout */
+  display: flex; /* Uses flexbox for layout */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  grid-template-columns: repeat(6, 1fr); /* Creates 6 equal-width columns */
+  justify-content: center; /* Centers items horizontally */
+  gap: 8px 15px; /* Adjusts spacing between items (8px vertical, 15px horizontal) */
+  margin-bottom: 40px; /* Adds spacing below the grid */
+  max-width: 1700px; /* Prevents grid from stretching too wide */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TV Shows Grid - Adds additional spacing for TV section */
+.tv-grid {
+  margin-top: 20px; /* Creates separation from previous content */
+}

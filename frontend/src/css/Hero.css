@@ -1,0 +1,109 @@
+/* Hero Section - Main Container */
+.hero {
+  text-align: center; /* Centers content inside */
+  background: none; /* No background color */
+  padding: 0; /* Removes extra spacing */
+  position: relative; /* Allows absolute positioning for children */
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 520px; /* Sets a fixed height */
+  max-width: 1600px; /* Restricts max width for responsiveness */
+  margin: 0 auto; /* Centers the hero section */
+  border-radius: 10px; /* Rounds corners for a modern look */
+}
+
+/* Slideshow Container */
+.slideshow {
+  position: relative; /* Allows positioning of child elements */
+  width: 100%;
+  max-width: 1600px; /* Matches hero width */
+  height: 500px; /* Defines slideshow height */
+  margin: 0 auto; /* Centers slideshow */
+  overflow: hidden; /* Prevents images from overflowing */
+  display: flex;
+  align-items: center; /* Centers content */
+  justify-content: center; /* Centers content */
+  background: none;
+  border-radius: 10px; /* Matches hero section */
+}
+
+/* Slideshow Images */
+.hero-image {
+  width: 100%; /* Ensures full width */
+  height: 100%; /* Ensures full height */
+  object-fit: contain; /* Ensures full image visibility without cropping */
+  cursor: pointer; /* Indicates images are clickable */
+  position: absolute; /* Stacks images on top of each other */
+  top: 0;
+  left: 0;
+  opacity: 1; /* Default visibility */
+}
+
+/* Active Image (Ensures the visible slide is in front) */
+.hero-image.active {
+  opacity: 1; /* Keeps active image visible */
+  z-index: 2; /* Places it above other images */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute; /* Allows positioning within the slideshow */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%); /* Adjusts for exact center alignment */
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  color: white; /* Ensures button visibility */
+  border: none; /* Removes default border */
+  padding: 10px 15px; /* Adds spacing inside buttons */
+  font-size: 24px; /* Increases icon size */
+  cursor: pointer; /* Indicates button is clickable */
+  transition: background 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
+  opacity: 0.6; /* Slight transparency */
+  border-radius: 5px; /* Rounds button edges */
+  z-index: 3; /* Ensures buttons stay above images */
+}
+
+/* Hover Effect: Darkens button background */
+.prev:hover, .next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1; /* Removes transparency on hover */
+}
+
+/* Positions Left Arrow */
+.prev {
+  left: 10px;
+}
+
+/* Positions Right Arrow */
+.next {
+  right: 10px;
+}
+
+/* Dots Indicator - Navigation Dots */
+.dots {
+  display: flex; /* Enables flexbox for alignment */
+  justify-content: center; /* Centers dots horizontally */
+  margin-top: 5px;
+  position: absolute; /* Positions dots relative to slideshow */
+  bottom: 20px; /* Places dots at the bottom */
+  left: 50%; /* Centers horizontally */
+  transform: translateX(-50%); /* Ensures exact centering */
+  z-index: 3; /* Ensures dots appear above images */
+}
+
+/* Individual Dots */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px; /* Adds spacing between dots */
+  background-color: rgba(255, 255, 255, 0.5); /* Default color */
+  border-radius: 50%; /* Makes dots circular */
+  display: inline-block;
+  cursor: pointer; /* Indicates dots are clickable */
+  transition: background 0.3s; /* Smooth color transition */
+}
+
+/* Active Dot (Indicates current slide) */
+.dot.active {
+  background-color: white; /* Highlights the active dot */
+}

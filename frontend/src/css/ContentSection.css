@@ -1,0 +1,18 @@
+/* Content Section Styles */
+.content-section {
+  text-align: center; /* Centers the content horizontally */
+  padding: 20px 0; /* Adds vertical spacing */
+  background-color: black; /* Sets the background color */
+  display: flex; /* Uses flexbox for centering */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+}
+
+/* Content Banner Image */
+.content-banner {
+  width: 100%; /* Ensures responsiveness */
+  max-width: 1600px; /* Limits maximum width for large screens */
+  height: 500px; /* Maintains a fixed height */
+  object-fit: contain; /* Ensures full image visibility without cropping */
+  border-radius: 10px; /* Rounds corners for a modern look */
+}

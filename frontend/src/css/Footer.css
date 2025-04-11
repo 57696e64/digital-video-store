@@ -1,0 +1,64 @@
+/* Footer Container */
+.footer {
+  background-color: black; /* Ensures footer background remains dark */
+  color: white; /* Sets text color for contrast */
+  padding: 20px; /* Adds spacing inside the footer */
+  display: flex;
+  flex-direction: column; /* Stacks sections vertically */
+  align-items: center; /* Centers footer content */
+  text-align: center; /* Aligns text to the center */
+  width: 100%; /* Ensures full width */
+  max-width: 1800px; /* Matches the width of the header and content */
+  margin: 0 auto; /* Centers the footer */
+}
+
+/* Footer Sections Layout */
+.footer-sections {
+  display: flex; /* Uses flexbox to arrange sections */
+  justify-content: space-around; /* Spreads sections evenly */
+  width: 100%;
+  max-width: 1200px; /* Controls the maximum width for better alignment */
+  margin-bottom: 20px; /* Adds spacing below sections */
+}
+
+/* Section Titles */
+.footer-section h4 {
+  margin-bottom: 10px; /* Adds spacing below the section title */
+  font-size: 18px; /* Sets a readable font size */
+  color: #007bff; /* Highlights titles with blue */
+}
+
+/* Footer Links */
+.footer-section ul {
+  list-style: none; /* Removes default bullet points */
+  padding: 0; /* Removes default padding */
+}
+
+.footer-section ul li {
+  margin: 5px 0; /* Adds spacing between links */
+  font-size: 14px; /* Sets a smaller font size */
+  cursor: pointer; /* Makes items clickable */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover Effect: Changes text color when hovered */
+.footer-section ul li:hover {
+  color: #007bff;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex; /* Uses flexbox for alignment */
+  gap: 15px; /* Adds spacing between icons */
+  font-size: 20px; /* Increases icon size */
+}
+
+/* Hover Effect: Changes icon color when hovered */
+.social-icons svg {
+  cursor: pointer; /* Indicates icons are clickable */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons svg:hover {
+  color: #007bff; /* Changes icon color to blue */
+}

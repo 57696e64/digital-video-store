@@ -1,0 +1,20 @@
+/* Movie Container - Wraps the Movie Card */
+.movie-container {
+  display: flex; /* Enables column layout */
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center; /* Centers the movie card inside the container */
+  width: 250px; /* Ensures consistent card size */
+  background-color: #222; /* Maintains dark theme for contrast */
+  padding: 10px; /* Provides spacing inside the container */
+  border-radius: 10px; /* Rounds corners for a modern look */
+  text-align: left; /* Aligns text content to the left */
+}
+
+/* Marketing Phrase Below the Movie Card */
+.marketing-phrase {
+  margin-top: 5px; /* Adds a small gap between the card and the phrase */
+  font-size: 13px; /* Ensures text remains readable but not overwhelming */
+  color: #bbb; /* Uses light gray for subtle contrast */
+  text-align: left; /* Keeps text left-aligned */
+  padding: 0; /* Removes unnecessary padding */
+}

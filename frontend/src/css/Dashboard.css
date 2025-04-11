@@ -1,0 +1,47 @@
+/* Dashboard Page Styles */
+.dashboard {
+    padding: 40px 20px; /* Adds spacing at top and sides */
+    background-color: black; /* Matches the app's dark theme */
+    color: white; /* Ensures text is readable against dark background */
+    min-height: 100vh; /* Full screen height */
+    text-align: center; /* Centers text like heading */
+}
+  
+/* Page Title */
+.dashboard h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Section displaying user profile */
+.user-profile {
+    max-width: 600px; /* Limits width for readability */
+    margin: 0 auto; /* Horizontally centers */
+    background-color: #111; /* Slight contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    text-align: left; /* Aligns inner text left */
+}
+
+/* Profile info labels */
+.user-profile p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Highlight labels */
+.user-profile strong {
+    color: #007bff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .user-profile {
+        padding: 15px;
+    }
+    .user-profile p {
+        font-size: 14px;
+    }
+}

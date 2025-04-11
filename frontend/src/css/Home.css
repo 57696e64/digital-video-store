@@ -1,0 +1,6 @@
+/* Home Page Styles */
+.home {
+  padding: 20px; /* Adds spacing around the home page content */
+  background-color: black; /* Sets background to black for a dark theme */
+  color: white; /* Ensures text is white for contrast */
+}

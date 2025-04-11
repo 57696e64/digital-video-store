@@ -1,0 +1,33 @@
+/* Collection Page Styles */
+.collection {
+  padding: 20px; /* Adds spacing around content */
+  background-color: black; /* Sets background to black for a dark theme */
+  color: white; /* Ensures text remains visible on a dark background */
+  text-align: center; /* Centers content inside the collection container */
+}
+
+/* Tabs Navigation - Controls the filter buttons */
+.tabs {
+  display: flex; /* Enables flexbox for alignment */
+  justify-content: center; /* Centers the tabs horizontally */
+  margin-bottom: 20px; /* Adds spacing below the tab navigation */
+}
+
+/* Individual Tab Buttons */
+.tabs button {
+  background: none; /* Makes button transparent by default */
+  border: 1px solid white; /* Adds a white border for visibility */
+  color: white; /* Sets text color */
+  padding: 10px 20px; /* Adjusts button size */
+  margin: 0 10px; /* Adds spacing between buttons */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-size: 1rem; /* Ensures a readable font size */
+  transition: background 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover Effect & Active Tab Styling */
+.tabs button:hover,
+.tabs button.active {
+  background: white; /* Turns background white on hover/active */
+  color: black; /* Changes text color to black for contrast */
+}

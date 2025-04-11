@@ -24,10 +24,12 @@ public class CorsConfig {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				// Allow all paths to be accessed from http://localhost:3000
+				// Allow both localhost and Vercel frontend origins
 				registry.addMapping("/**")
-					.allowedOrigins("https://digital-video-store-livid.vercel.app")
-					.allowedOrigins("http://localhost:3000")
+					.allowedOrigins(
+						"http://localhost:3000",
+						"https://digital-video-store-livid.vercel.app"
+					)
 					.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 					.allowedHeaders("*");
 			}

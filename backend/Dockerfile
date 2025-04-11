@@ -1,25 +1,17 @@
-# Use an official JDK image as the base
-FROM eclipse-temurin:17-jdk
+# Use OpenJDK 21 as the base image
+FROM eclipse-temurin:21-jdk
 
 # Set working directory
 WORKDIR /app
 
-# Copy Maven wrapper and grant permission
-COPY mvnw .
-RUN chmod +x mvnw
+# Copy project files
+COPY . .
 
-# Copy Maven wrapper folder and pom.xml
-COPY .mvn .mvn
-COPY pom.xml .
+# Grant permission to run the wrapper
+RUN chmod +x ./mvnw
 
-# Pre-download dependencies
-RUN ./mvnw dependency:go-offline
+# Build the application (use clean package to create the jar)
+RUN ./mvnw clean package -DskipTests
 
-# Copy full source code
-COPY src src
-
-# Build the application
-RUN ./mvnw package
-
-# Run the built jar file
+# Run the jar file
 CMD ["java", "-jar", "target/*.jar"]

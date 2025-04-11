@@ -13,5 +13,8 @@ RUN chmod +x ./mvnw
 # Build the application (use clean package to create the jar)
 RUN ./mvnw clean package -DskipTests
 
-# Run the jar file
-CMD ["java", "-jar", "target/*.jar"]
+# Find .jar
+RUN ln -s target/*.jar app.jar
+
+# CMD
+CMD ["java", "-jar", "app.jar"]
